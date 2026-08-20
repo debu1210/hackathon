@@ -1,0 +1,124 @@
+/* =========================================
+   3D HOME PAGE STYLES 
+   ========================================= */
+.home-wrapper {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.title-3d {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 2px 4px 6px rgba(0,0,0,0.3); /* Gives the text a slight 3D pop */
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+/* The Base Card */
+.tech-card {
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 20px;
+  width: 320px;
+  overflow: hidden;
+  cursor: pointer;
+  
+  /* 3D Foundation */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth, bouncy animation */
+}
+
+/* The Hover Effect (Where the 3D magic happens) */
+.tech-card:hover {
+  /* Lifts the card, tilts it slightly back, and makes the shadow massive */
+  transform: perspective(1000px) rotateX(5deg) translateY(-15px) translateZ(20px);
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Formatting */
+.card-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 4px solid #007bff; /* Adds a tech-blue accent line */
+}
+
+.card-text {
+  padding: 25px 20px;
+}
+
+.card-text h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.8rem;
+}
+
+.card-text p {
+  margin: 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+
+/* =========================================
+   PORTAL PAGES (Health, Med, Bio Tech) 
+   ========================================= */
+.portal-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  color: #333;
+}
+
+.portal-container input {
+  width: 80%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.portal-container button {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.portal-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Specific styling for the Med Tech reminder list */
+.portal-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+.portal-container li {
+  background: #f4f6f9;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: left;
+  border-left: 4px solid #007bff;
+}
